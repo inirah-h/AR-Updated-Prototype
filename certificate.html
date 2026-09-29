@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Safety Certificate - AR Safety Training</title>
+
+    <link rel="stylesheet" href="certificate.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+
+        <div class="brand">
+            <div class="brand-icon">🛡️</div>
+
+            <div>
+                <h1>AR SAFETY TRAINING</h1>
+                <span>Jharkhand Mines</span>
+            </div>
+        </div>
+
+        <div class="top-actions">
+
+            <div class="online-status">
+                <span></span>
+                Online
+            </div>
+
+            <button class="back-btn" onclick="goBack()">
+                ← Back
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <div class="page-heading">
+
+            <span>SAFETY CERTIFICATION</span>
+
+            <h2>Training Certificate</h2>
+
+            <p>
+                Your mine safety training certificate has been issued successfully.
+            </p>
+
+        </div>
+
+
+        <!-- CERTIFICATE -->
+        <section class="certificate-wrapper">
+
+            <div class="certificate">
+
+                <div class="certificate-border">
+
+                    <!-- HEADER -->
+                    <div class="certificate-header">
+
+                        <div class="shield">
+                            🛡️
+                        </div>
+
+                        <div>
+                            <h1>AR SAFETY TRAINING</h1>
+                            <p>JHARKHAND MINES</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="certificate-title">
+
+                        <span>CERTIFICATE OF COMPLETION</span>
+
+                        <h2>Mine Safety Training</h2>
+
+                        <p>
+                            This certificate is proudly presented to
+                        </p>
+
+                    </div>
+
+
+                    <!-- NAME -->
+                    <div class="worker-name" id="workerName">
+                        Ramesh Murmu
+                    </div>
+
+
+                    <p class="certificate-text">
+
+                        for successfully completing the required
+                        mine safety training program covering
+
+                    </p>
+
+
+                    <!-- MODULES -->
+                    <div class="modules">
+
+                        <div class="module">
+                            <span>🔥</span>
+                            <strong>Fire Emergency</strong>
+                        </div>
+
+                        <div class="module">
+                            <span>⚠️</span>
+                            <strong>Gas Leakage</strong>
+                        </div>
+
+                        <div class="module">
+                            <span>⚙️</span>
+                            <strong>Machine Safety</strong>
+                        </div>
+
+                    </div>
+
+
+                    <p class="certificate-text bottom-text">
+
+                        The trainee has demonstrated completion of the
+                        prescribed safety learning activities.
+
+                    </p>
+
+
+                    <!-- DETAILS -->
+                    <div class="certificate-details">
+
+                        <div>
+                            <span>CERTIFICATE ID</span>
+                            <strong id="certificateId">
+                                SAR-JH-2026-001
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>ISSUED DATE</span>
+                            <strong id="issuedDate">
+                                --
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>STATUS</span>
+                            <strong class="valid">
+                                ✓ VALID
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- SIGNATURE -->
+                    <div class="certificate-footer">
+
+                        <div class="signature">
+                            <div class="signature-line"></div>
+                            <strong>Safety Training Authority</strong>
+                            <span>AR Safety Training System</span>
+                        </div>
+
+                        <div class="verified">
+                            <div class="verified-icon">✓</div>
+
+                            <div>
+                                <strong>VERIFIED</strong>
+                                <span>Digital Certificate</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+            <div class="certificate-actions">
+
+                <button class="primary-btn" onclick="printCertificate()">
+                    🖨️ Print Certificate
+                </button>
+
+                <button class="secondary-btn" onclick="goBack()">
+                    ← Back to Progress
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="certificate.js"></script>
+
+</body>
+</html>

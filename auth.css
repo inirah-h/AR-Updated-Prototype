@@ -1,0 +1,557 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #050505;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* =========================================
+   MAIN APP
+========================================= */
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(139, 92, 246, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(124, 58, 237, 0.12),
+            transparent 30%
+        ),
+        #050505;
+}
+
+/* =========================================
+   LOGO / BRANDING
+========================================= */
+
+.logo-section {
+    width: 42%;
+    max-width: 520px;
+
+    text-align: center;
+
+    padding: 40px;
+
+    margin-right: 70px;
+}
+
+.logo-box {
+    width: 90px;
+    height: 90px;
+
+    background: #8B5CF6;
+
+    border-radius: 25px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 48px;
+    font-weight: bold;
+
+    color: #FFFFFF;
+
+    box-shadow:
+        0 0 35px rgba(139, 92, 246, 0.45);
+}
+
+.logo-section h1 {
+    margin-top: 10px;
+
+    font-size: 38px;
+
+    line-height: 1.15;
+
+    letter-spacing: 5px;
+
+    color: #FFFFFF;
+}
+
+.logo-section h1 span {
+    color: #A78BFA;
+}
+
+.logo-section p {
+    margin-top: 15px;
+
+    color: #A1A1AA;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+/* =========================================
+   SCREEN / FORM CARD
+========================================= */
+
+.screen {
+    width: 100%;
+    max-width: 500px;
+
+    background: #0D0D0F;
+
+    border: 1px solid #2B2340;
+
+    border-radius: 28px;
+
+    padding: 38px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(139, 92, 246, 0.08);
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+
+    color: #FFFFFF;
+}
+
+.description {
+    color: #A1A1AA;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.primary-btn,
+.secondary-btn {
+    width: 100%;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    margin-top: 12px;
+
+    transition: 0.2s;
+}
+
+.primary-btn {
+    background: #8B5CF6;
+
+    color: #FFFFFF;
+
+    box-shadow:
+        0 5px 20px rgba(139, 92, 246, 0.25);
+}
+
+.primary-btn:hover {
+    background: #7C3AED;
+
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: #17131F;
+
+    color: #A78BFA;
+
+    border: 1px solid #3B2D55;
+}
+
+.secondary-btn:hover {
+    background: #211A2D;
+
+    border-color: #8B5CF6;
+}
+
+.back-btn {
+    background: transparent;
+
+    color: #A1A1AA;
+
+    padding: 0;
+
+    margin-bottom: 25px;
+}
+
+.back-btn:hover {
+    color: #A78BFA;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: #D4D4D8;
+
+    margin-top: 17px;
+
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+
+    padding: 14px;
+
+    background: #151517;
+
+    border: 1px solid #30283D;
+
+    border-radius: 12px;
+
+    color: #FFFFFF;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #8B5CF6;
+
+    box-shadow:
+        0 0 0 2px rgba(139, 92, 246, 0.12);
+}
+
+input::placeholder {
+    color: #71717A;
+}
+
+small {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #71717A;
+
+    font-size: 11px;
+}
+
+.verify-note {
+    color: #A1A1AA;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    margin-top: 15px;
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.error {
+    color: #F87171;
+
+    font-size: 12px;
+
+    margin-top: 12px;
+
+    line-height: 1.5;
+}
+
+/* =========================================
+   SWITCH
+========================================= */
+
+.switch-text {
+    text-align: center;
+
+    color: #71717A;
+
+    font-size: 12px;
+
+    margin-top: 20px;
+}
+
+.switch-text span {
+    color: #A78BFA;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.switch-text span:hover {
+    color: #C4B5FD;
+}
+
+/* =========================================
+   FORGOT PASSWORD
+========================================= */
+
+.forgot-text {
+    text-align: center;
+
+    margin-top: 15px;
+
+    color: #A1A1AA;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.forgot-text:hover {
+    color: #A78BFA;
+}
+
+/* =========================================
+   OTP
+========================================= */
+
+.otp-demo {
+    background: #171323;
+
+    border: 1px solid #35294B;
+
+    color: #A1A1AA;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+}
+
+.otp-demo strong {
+    display: block;
+
+    font-size: 25px;
+
+    color: #A78BFA;
+
+    letter-spacing: 5px;
+
+    margin-top: 5px;
+}
+
+/* =========================================
+   PASSWORD RULES
+========================================= */
+
+.password-rules {
+    background: #15131A;
+
+    border: 1px solid #30283D;
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    margin-top: 12px;
+}
+
+.password-rules p {
+    font-size: 11px;
+
+    color: #A1A1AA;
+
+    margin: 6px 0;
+}
+
+/* =========================================
+   SUCCESS
+========================================= */
+
+.success {
+    color: #4ADE80;
+
+    font-size: 12px;
+
+    margin-top: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) and (min-width: 501px) {
+
+    .app {
+        padding: 30px;
+    }
+
+    .logo-section {
+        width: 40%;
+        margin-right: 30px;
+        padding: 20px;
+    }
+
+    .logo-section h1 {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    .logo-box {
+        width: 75px;
+        height: 75px;
+        font-size: 40px;
+    }
+
+    .screen {
+        max-width: 430px;
+        padding: 30px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .app {
+        display: block;
+
+        padding: 25px 18px;
+
+        min-height: 100vh;
+    }
+
+    .logo-section {
+        width: 100%;
+
+        padding: 15px 5px;
+
+        margin: 0 auto 25px;
+    }
+
+    .logo-box {
+        width: 65px;
+        height: 65px;
+
+        border-radius: 18px;
+
+        font-size: 35px;
+
+        margin-bottom: 18px;
+    }
+
+    .logo-section h1 {
+        font-size: 25px;
+
+        letter-spacing: 3px;
+    }
+
+    .logo-section p {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+    .screen {
+        width: 100%;
+
+        max-width: 500px;
+
+        margin: auto;
+
+        padding: 22px;
+
+        border-radius: 25px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .app {
+        padding: 20px 14px;
+    }
+
+    .logo-section {
+        margin-bottom: 20px;
+    }
+
+    .logo-box {
+        width: 58px;
+        height: 58px;
+
+        font-size: 30px;
+    }
+
+    .logo-section h1 {
+        font-size: 22px;
+    }
+
+    .screen {
+        padding: 19px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        padding: 14px;
+    }
+}

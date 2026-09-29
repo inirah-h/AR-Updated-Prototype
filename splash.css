@@ -1,0 +1,729 @@
+/* ============================================
+   AR SAFETY TRAINING - SPLASH SCREEN
+   PURPLE / BLACK / WHITE
+   RESPONSIVE MOBILE + DESKTOP
+   ============================================ */
+
+
+/* ============================================
+   VARIABLES
+   ============================================ */
+
+:root {
+
+    --purple: #8b5cf6;
+    --purple-dark: #7c3aed;
+    --purple-light: #a78bfa;
+
+    --black: #050505;
+    --black-light: #0d0d0f;
+
+    --white: #ffffff;
+    --grey: #a1a1aa;
+
+}
+
+
+/* ============================================
+   RESET
+   ============================================ */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ============================================
+   BODY
+   ============================================ */
+
+body {
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+/* ============================================
+   MAIN CONTAINER
+   ============================================ */
+
+.splash-container {
+
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(139, 92, 246, 0.12),
+            transparent 42%
+        ),
+
+        var(--black);
+
+}
+
+
+/* ============================================
+   PURPLE GLOW
+   ============================================ */
+
+.splash-container::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(139, 92, 246, 0.08);
+
+    filter: blur(100px);
+
+    pointer-events: none;
+
+}
+
+
+/* ============================================
+   CORNER DESIGN
+   ============================================ */
+
+.corner {
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    border-color: var(--purple);
+
+    opacity: 0.7;
+
+}
+
+
+/* TOP LEFT */
+
+.top-left {
+
+    top: 25px;
+    left: 25px;
+
+    border-top: 2px solid var(--purple);
+    border-left: 2px solid var(--purple);
+
+}
+
+
+/* TOP RIGHT */
+
+.top-right {
+
+    top: 25px;
+    right: 25px;
+
+    border-top: 2px solid var(--purple);
+    border-right: 2px solid var(--purple);
+
+}
+
+
+/* BOTTOM LEFT */
+
+.bottom-left {
+
+    bottom: 25px;
+    left: 25px;
+
+    border-bottom: 2px solid var(--purple);
+    border-left: 2px solid var(--purple);
+
+}
+
+
+/* BOTTOM RIGHT */
+
+.bottom-right {
+
+    bottom: 25px;
+    right: 25px;
+
+    border-bottom: 2px solid var(--purple);
+    border-right: 2px solid var(--purple);
+
+}
+
+
+/* ============================================
+   SHIELD BOX
+   ============================================ */
+
+.shield-box {
+
+    position: relative;
+
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 28px;
+
+    border-radius: 24px;
+
+    background: var(--black-light);
+
+    border: 1px solid rgba(139, 92, 246, 0.45);
+
+    box-shadow:
+
+        0 0 35px rgba(139, 92, 246, 0.18),
+
+        inset 0 0 20px rgba(139, 92, 246, 0.05);
+
+}
+
+
+/* ============================================
+   SHIELD
+   ============================================ */
+
+.shield {
+
+    width: 62px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--purple);
+
+    color: var(--white);
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    clip-path: polygon(
+        50% 0%,
+        92% 15%,
+        85% 70%,
+        50% 100%,
+        15% 70%,
+        8% 15%
+    );
+
+    box-shadow:
+
+        0 0 25px rgba(139, 92, 246, 0.45);
+
+}
+
+
+/* ============================================
+   TITLE
+   ============================================ */
+
+h1 {
+
+    position: relative;
+
+    font-size: 38px;
+
+    line-height: 1.05;
+
+    letter-spacing: 3px;
+
+    font-weight: 800;
+
+}
+
+
+h1 span {
+
+    color: var(--purple-light);
+
+}
+
+
+h1 br + * {
+
+    color: var(--white);
+
+}
+
+
+/* ============================================
+   SUBTITLE
+   ============================================ */
+
+.subtitle {
+
+    margin-top: 14px;
+
+    color: var(--grey);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+}
+
+
+/* ============================================
+   PROGRESS CONTAINER
+   ============================================ */
+
+.progress-container {
+
+    position: relative;
+
+    width: 280px;
+    height: 5px;
+
+    margin-top: 40px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #202024;
+
+}
+
+
+/* ============================================
+   PROGRESS BAR
+   ============================================ */
+
+.progress-bar {
+
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    background: var(--purple);
+
+    box-shadow:
+
+        0 0 12px rgba(139, 92, 246, 0.8);
+
+    animation:
+
+        loading 10s linear forwards;
+
+}
+
+
+/* ============================================
+   LOADING ANIMATION
+   ============================================ */
+
+@keyframes loading {
+
+    from {
+
+        width: 0%;
+
+    }
+
+    to {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* ============================================
+   LOADING TEXT
+   ============================================ */
+
+.loading-text {
+
+    margin-top: 13px;
+
+    color: var(--grey);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    animation: blink 1.5s infinite;
+
+}
+
+
+/* ============================================
+   BLINK
+   ============================================ */
+
+@keyframes blink {
+
+    0%,
+    100% {
+
+        opacity: 0.4;
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* ============================================
+   DESKTOP
+   ============================================ */
+
+@media (min-width: 769px) {
+
+    .shield-box {
+
+        width: 110px;
+        height: 110px;
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .shield {
+
+        width: 68px;
+        height: 76px;
+
+        font-size: 37px;
+
+    }
+
+
+    h1 {
+
+        font-size: 44px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 11px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .progress-container {
+
+        width: 340px;
+
+        margin-top: 45px;
+
+    }
+
+
+    .loading-text {
+
+        font-size: 10px;
+
+    }
+
+
+    .corner {
+
+        width: 120px;
+        height: 120px;
+
+    }
+
+
+    .top-left,
+    .top-right {
+
+        top: 35px;
+
+    }
+
+
+    .bottom-left,
+    .bottom-right {
+
+        bottom: 35px;
+
+    }
+
+
+    .top-left,
+    .bottom-left {
+
+        left: 35px;
+
+    }
+
+
+    .top-right,
+    .bottom-right {
+
+        right: 35px;
+
+    }
+
+}
+
+
+/* ============================================
+   TABLET
+   ============================================ */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .shield-box {
+
+        width: 90px;
+        height: 90px;
+
+    }
+
+
+    .shield {
+
+        width: 58px;
+        height: 65px;
+
+        font-size: 31px;
+
+    }
+
+
+    h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .progress-container {
+
+        width: 280px;
+
+    }
+
+}
+
+
+/* ============================================
+   MOBILE
+   ============================================ */
+
+@media (max-width: 480px) {
+
+    .splash-container {
+
+        padding: 20px;
+
+    }
+
+
+    .corner {
+
+        width: 55px;
+        height: 55px;
+
+    }
+
+
+    .top-left,
+    .top-right {
+
+        top: 18px;
+
+    }
+
+
+    .bottom-left,
+    .bottom-right {
+
+        bottom: 18px;
+
+    }
+
+
+    .top-left,
+    .bottom-left {
+
+        left: 18px;
+
+    }
+
+
+    .top-right,
+    .bottom-right {
+
+        right: 18px;
+
+    }
+
+
+    .shield-box {
+
+        width: 82px;
+        height: 82px;
+
+        margin-bottom: 24px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .shield {
+
+        width: 52px;
+        height: 59px;
+
+        font-size: 28px;
+
+    }
+
+
+    h1 {
+
+        font-size: 29px;
+
+        letter-spacing: 2px;
+
+        line-height: 1.08;
+
+    }
+
+
+    .subtitle {
+
+        margin-top: 12px;
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .progress-container {
+
+        width: 220px;
+
+        height: 4px;
+
+        margin-top: 35px;
+
+    }
+
+
+    .loading-text {
+
+        font-size: 7px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+}
+
+
+/* ============================================
+   VERY SMALL MOBILE
+   ============================================ */
+
+@media (max-width: 360px) {
+
+    .shield-box {
+
+        width: 72px;
+        height: 72px;
+
+    }
+
+
+    .shield {
+
+        width: 46px;
+        height: 53px;
+
+        font-size: 24px;
+
+    }
+
+
+    h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 7px;
+
+    }
+
+
+    .progress-container {
+
+        width: 190px;
+
+    }
+
+}

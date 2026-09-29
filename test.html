@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Safety Test - AR SAFETY TRAINING</title>
+    
+    <link rel="stylesheet"
+          href="test.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- ================= TOP BAR ================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🛡️
+            </div>
+
+            <div>
+
+                <h1>
+                    Suraksha AR
+                </h1>
+
+                <span>
+                    Jharkhand Mines
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="top-actions">
+
+            <div class="connection-status">
+
+                <span class="status-dot"></span>
+
+                <span id="connectionText"
+                      data-i18n="online">
+                    Online
+                </span>
+
+            </div>
+
+
+            <select id="languageSelect"
+                    class="language-select">
+
+                <option value="en">
+                    EN
+                </option>
+
+                <option value="hi">
+                    हिन्दी
+                </option>
+
+                <option value="sat">
+                    ᱥᱟᱱᱛᱟᱲᱤ
+                </option>
+
+            </select>
+
+
+            <button class="sync-btn"
+                    id="syncBtn">
+
+                ↻
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <div class="brand-icon">
+                🛡️
+            </div>
+
+            <div>
+
+                <strong>
+                    AR SAFETY TRAINING
+                </strong>
+
+                <span>
+                    Jharkhand Mines
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <nav class="side-nav">
+
+
+            <button class="nav-item"
+                    id="sideHome">
+
+                <span>⌂</span>
+
+                <strong data-i18n="home">
+                    Home
+                </strong>
+
+            </button>
+
+
+            <button class="nav-item"
+                    id="sideTraining">
+
+                <span>🎯</span>
+
+                <strong data-i18n="training">
+                    Training
+                </strong>
+
+            </button>
+
+
+            <button class="nav-item"
+                    id="sideProgress">
+
+                <span>📊</span>
+
+                <strong data-i18n="progress">
+                    Progress
+                </strong>
+
+            </button>
+
+
+            <button class="nav-item"
+                    id="sideAttendance">
+
+                <span>📋</span>
+
+                <strong data-i18n="attendance">
+                    Attendance
+                </strong>
+
+            </button>
+
+
+            <button class="nav-item"
+                    id="sideProfile">
+
+                <span>👤</span>
+
+                <strong data-i18n="profile">
+                    Profile
+                </strong>
+
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-safety">
+
+                <span class="status-dot"></span>
+
+                <div>
+
+                    <strong>
+                        Safety System
+                    </strong>
+
+                    <small>
+                        Operational
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+
+
+            <div>
+
+                <p class="small-label">
+                    FINAL ASSESSMENT
+                </p>
+
+                <h2 data-i18n="safetyKnowledgeTest">
+                    Safety Knowledge Test
+                </h2>
+
+                <p>
+                    Test your knowledge of the safety procedures
+                    learned during the training modules.
+                </p>
+
+            </div>
+
+
+            <div class="test-progress">
+
+                <span>
+                    Question
+                </span>
+
+                <strong id="questionNumber">
+                    1 / 10
+                </strong>
+
+                <div class="progress-bar">
+
+                    <div id="progressFill"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= TEST INFO ================= -->
+
+        <section class="test-info">
+
+
+            <div class="test-info-icon">
+                📝
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Complete the Safety Test
+                </strong>
+
+                <p>
+                    Answer all questions carefully.
+                    Your result will be shown after submitting the test.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= QUESTION CARD ================= -->
+
+        <section class="question-card"
+                 id="questionCard">
+
+
+            <div class="question-header">
+
+                <span id="questionCategory">
+                    FIRE SAFETY
+                </span>
+
+                <span id="questionCount">
+                    Question 1 of 10
+                </span>
+
+            </div>
+
+
+            <h3 id="questionText">
+
+                What should you do first when you
+                notice a fire inside the mine?
+
+            </h3>
+
+
+            <div class="options"
+                 id="optionsContainer">
+
+
+                <label class="option">
+
+                    <input type="radio"
+                           name="answer"
+                           value="0">
+
+                    <span class="option-letter">
+                        A
+                    </span>
+
+                    <span class="option-text">
+                        Raise the alarm and inform others
+                    </span>
+
+                </label>
+
+
+                <label class="option">
+
+                    <input type="radio"
+                           name="answer"
+                           value="1">
+
+                    <span class="option-letter">
+                        B
+                    </span>
+
+                    <span class="option-text">
+                        Continue working normally
+                    </span>
+
+                </label>
+
+
+                <label class="option">
+
+                    <input type="radio"
+                           name="answer"
+                           value="2">
+
+                    <span class="option-letter">
+                        C
+                    </span>
+
+                    <span class="option-text">
+                        Go closer to the fire
+                    </span>
+
+                </label>
+
+
+                <label class="option">
+
+                    <input type="radio"
+                           name="answer"
+                           value="3">
+
+                    <span class="option-letter">
+                        D
+                    </span>
+
+                    <span class="option-text">
+                        Ignore the situation
+                    </span>
+
+                </label>
+
+
+            </div>
+
+
+            <!-- ================= QUESTION NAVIGATION ================= -->
+
+            <div class="question-actions">
+
+
+                <button class="secondary-btn"
+                        id="previousBtn"
+                        disabled>
+
+                    ←
+
+                    <span data-i18n="previous">
+                        Previous
+                    </span>
+
+                </button>
+
+
+                <button class="primary-btn"
+                        id="nextBtn">
+
+                    <span data-i18n="next">
+                        Next
+                    </span>
+
+                    →
+
+                </button>
+
+
+                <button class="submit-btn"
+                        id="submitBtn"
+                        style="display:none;">
+
+                    <span data-i18n="submit">
+                        Submit
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= RESULT CARD ================= -->
+
+        <section class="result-card"
+                 id="resultCard"
+                 style="display:none;">
+
+
+            <div class="result-icon"
+                 id="resultIcon">
+
+                🎉
+
+            </div>
+
+
+            <p class="small-label">
+                TEST RESULT
+            </p>
+
+
+            <h2 id="resultTitle">
+                Test Completed
+            </h2>
+
+
+            <div class="score-circle">
+
+                <strong id="scoreText">
+                    0 / 10
+                </strong>
+
+            </div>
+
+
+            <p id="resultMessage">
+                Your test result will appear here.
+            </p>
+
+
+            <button class="primary-btn"
+                    id="continueBtn">
+
+                Continue →
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ================= SAFETY MESSAGE ================= -->
+
+        <section class="safety-message">
+
+
+            <div class="message-icon">
+                ⚠
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Safety First
+                </strong>
+
+                <p>
+                    Safety knowledge helps workers respond correctly
+                    during emergency situations.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= MOBILE NAV ================= -->
+
+    <nav class="bottom-nav">
+
+
+        <button class="bottom-item"
+                id="mobileHome">
+
+            <span>⌂</span>
+
+            <small data-i18n="home">
+                Home
+            </small>
+
+        </button>
+
+
+        <button class="bottom-item"
+                id="mobileTraining">
+
+            <span>🎯</span>
+
+            <small data-i18n="training">
+                Training
+            </small>
+
+        </button>
+
+
+        <button class="bottom-item"
+                id="mobileProgress">
+
+            <span>📊</span>
+
+            <small data-i18n="progress">
+                Progress
+            </small>
+
+        </button>
+
+
+        <button class="bottom-item"
+                id="mobileProfile">
+
+            <span>👤</span>
+
+            <small data-i18n="profile">
+                Profile
+            </small>
+
+        </button>
+
+    </nav>
+
+
+
+    <!-- ================= SYNC OVERLAY ================= -->
+
+    <div class="sync-overlay"
+         id="syncOverlay">
+
+
+        <div class="sync-box">
+
+            <div class="loader"></div>
+
+            <strong>
+                Syncing data...
+            </strong>
+
+            <span>
+                Please wait
+            </span>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="test.js"></script>
+
+<script src="language-system.js"></script>
+
+
+</body>
+
+</html>

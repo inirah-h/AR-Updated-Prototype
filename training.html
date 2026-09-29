@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Training - AR SAFETY TRAINING</title>
+    
+    <link rel="stylesheet" href="training.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= TOP BAR ================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">🛡️</div>
+
+            <div>
+                <h1>AR SAFETY TRAINING</h1>
+                <span>Jharkhand Mines</span>
+            </div>
+
+        </div>
+
+
+        <div class="top-actions">
+
+            <div class="connection-status">
+
+                <span class="status-dot"></span>
+
+                <span id="connectionText"
+                      data-i18n="online">
+                    Online
+                </span>
+
+            </div>
+
+
+            <select id="languageSelect"
+                    class="language-select">
+
+                <option value="en">EN</option>
+
+                <option value="hi">हिन्दी</option>
+
+                <option value="sat">ᱥᱟᱱᱛᱟᱲᱤ</option>
+
+            </select>
+
+
+            <button class="sync-btn"
+                    id="syncBtn"
+                    title="Sync">
+
+                ↻
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="brand-icon">🛡️</div>
+
+            <div>
+
+                <strong>AR SAFETY TRAINING</strong>
+
+                <span>Jharkhand Mines</span>
+
+            </div>
+
+        </div>
+
+
+
+        <nav class="side-nav">
+
+            <button class="nav-item"
+                    id="sideHome">
+
+                <span>⌂</span>
+
+                <strong data-i18n="home">
+                    Home
+                </strong>
+
+            </button>
+
+
+            <button class="nav-item active"
+                    id="sideTraining">
+
+                <span>🎯</span>
+
+                <strong data-i18n="training">
+                    Training
+                </strong>
+
+            </button>
+
+
+            <button class="nav-item"
+                    id="sideProgress">
+
+                <span>📊</span>
+
+                <strong data-i18n="progress">
+                    Progress
+                </strong>
+
+            </button>
+
+
+            <button class="nav-item"
+                    id="sideAttendance">
+
+                <span>📋</span>
+
+                <strong data-i18n="attendance">
+                    Attendance
+                </strong>
+
+            </button>
+
+
+            <button class="nav-item"
+                    id="sideProfile">
+
+                <span>👤</span>
+
+                <strong data-i18n="profile">
+                    Profile
+                </strong>
+
+            </button>
+
+        </nav>
+
+
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-safety">
+
+                <span class="status-dot"></span>
+
+                <div>
+
+                    <strong>
+                        Safety System
+                    </strong>
+
+                    <small>
+                        Operational
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+
+            <div>
+
+                <p class="small-label"
+                   data-i18n="safetyTraining">
+                    SAFETY TRAINING
+                </p>
+
+
+                <h2>
+                    Mine Safety Training
+                </h2>
+
+
+                <p>
+                    Complete all safety scenarios before taking the final test.
+                </p>
+
+            </div>
+
+
+            <div class="training-progress">
+
+                <span data-i18n="trainingProgress">
+                    Training Progress
+                </span>
+
+
+                <strong id="progressText">
+                    0 / 3 Completed
+                </strong>
+
+
+                <div class="progress-bar">
+
+                    <div id="progressFill"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= INFO CARD ================= -->
+
+        <section class="training-info">
+
+            <div class="info-icon">
+                🎓
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Complete your safety training
+                </strong>
+
+
+                <p>
+                    Select a scenario below and learn the correct safety
+                    procedure through AR-based training.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SCENARIOS ================= -->
+
+        <section class="scenario-section">
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <span>
+                        TRAINING MODULES
+                    </span>
+
+
+                    <h3>
+                        Safety Scenarios
+                    </h3>
+
+                </div>
+
+
+                <small>
+                    3 Modules
+                </small>
+
+            </div>
+
+
+
+            <div class="scenario-grid">
+
+
+                <!-- ================= FIRE ================= -->
+
+                <article class="scenario-card"
+                         data-scenario="fire">
+
+
+                    <div class="scenario-top">
+
+                        <div class="scenario-icon fire">
+                            🔥
+                        </div>
+
+
+                        <span class="status-badge locked"
+                              data-i18n="notStarted">
+
+                            Not Started
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="scenario-content">
+
+                        <span class="module-number">
+                            MODULE 01
+                        </span>
+
+
+                        <h3 data-i18n="fireEmergency">
+                            Fire Emergency
+                        </h3>
+
+
+                        <p>
+                            Learn how to identify a fire emergency,
+                            raise an alarm and follow the correct
+                            evacuation procedure.
+                        </p>
+
+                    </div>
+
+
+                    <div class="scenario-footer">
+
+                        <div class="duration">
+
+                            <span>⏱</span>
+
+                            5–7 min
+
+                        </div>
+
+
+                        <button class="start-btn">
+
+                            <span data-i18n="startTraining">
+                                Start Training
+                            </span>
+
+                            <span>→</span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ================= GAS ================= -->
+
+                <article class="scenario-card"
+                         data-scenario="gas">
+
+
+                    <div class="scenario-top">
+
+                        <div class="scenario-icon gas">
+                            ☁️
+                        </div>
+
+
+                        <span class="status-badge locked"
+                              data-i18n="notStarted">
+
+                            Not Started
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="scenario-content">
+
+                        <span class="module-number">
+                            MODULE 02
+                        </span>
+
+
+                        <h3 data-i18n="gasLeakage">
+                            Gas Leakage
+                        </h3>
+
+
+                        <p>
+                            Learn how to detect gas leakage,
+                            respond safely and move away from
+                            the affected area.
+                        </p>
+
+                    </div>
+
+
+                    <div class="scenario-footer">
+
+                        <div class="duration">
+
+                            <span>⏱</span>
+
+                            5–7 min
+
+                        </div>
+
+
+                        <button class="start-btn">
+
+                            <span data-i18n="startTraining">
+                                Start Training
+                            </span>
+
+                            <span>→</span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ================= MACHINE ================= -->
+
+                <article class="scenario-card"
+                         data-scenario="machine">
+
+
+                    <div class="scenario-top">
+
+                        <div class="scenario-icon machine">
+                            ⚙️
+                        </div>
+
+
+                        <span class="status-badge locked"
+                              data-i18n="notStarted">
+
+                            Not Started
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="scenario-content">
+
+                        <span class="module-number">
+                            MODULE 03
+                        </span>
+
+
+                        <h3 data-i18n="machineMalfunction">
+                            Machine Malfunction
+                        </h3>
+
+
+                        <p>
+                            Learn how to respond when mining equipment
+                            malfunctions and follow safe shutdown
+                            procedures.
+                        </p>
+
+                    </div>
+
+
+                    <div class="scenario-footer">
+
+                        <div class="duration">
+
+                            <span>⏱</span>
+
+                            5–7 min
+
+                        </div>
+
+
+                        <button class="start-btn">
+
+                            <span data-i18n="startTraining">
+                                Start Training
+                            </span>
+
+                            <span>→</span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= TEST CARD ================= -->
+
+        <section class="test-card"
+                 id="testCard">
+
+
+            <div class="test-icon">
+                📝
+            </div>
+
+
+            <div class="test-content">
+
+                <span>
+                    FINAL ASSESSMENT
+                </span>
+
+
+                <h3 data-i18n="safetyKnowledgeTest">
+                    Safety Knowledge Test
+                </h3>
+
+
+                <p>
+                    Complete all 3 training modules to unlock the test.
+                </p>
+
+            </div>
+
+
+            <button id="testBtn"
+                    class="test-btn"
+                    disabled
+                    data-i18n="testLocked">
+
+                Test Locked 🔒
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ================= SAFETY MESSAGE ================= -->
+
+        <section class="safety-message">
+
+
+            <div class="message-icon">
+                ⚠
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Safety First
+                </strong>
+
+
+                <p>
+                    Complete every training module carefully.
+                    Understanding the correct procedure can help
+                    prevent accidents in mine work zones.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= MOBILE NAV ================= -->
+
+    <nav class="bottom-nav">
+
+
+        <button class="bottom-item"
+                id="mobileHome">
+
+            <span>⌂</span>
+
+            <small data-i18n="home">
+                Home
+            </small>
+
+        </button>
+
+
+        <button class="bottom-item active"
+                id="mobileTraining">
+
+            <span>🎯</span>
+
+            <small data-i18n="training">
+                Training
+            </small>
+
+        </button>
+
+
+        <button class="bottom-item"
+                id="mobileProgress">
+
+            <span>📊</span>
+
+            <small data-i18n="progress">
+                Progress
+            </small>
+
+        </button>
+
+
+        <button class="bottom-item"
+                id="mobileProfile">
+
+            <span>👤</span>
+
+            <small data-i18n="profile">
+                Profile
+            </small>
+
+        </button>
+
+    </nav>
+
+
+
+    <!-- ================= TRAINING MODAL ================= -->
+
+    <div class="modal-overlay"
+         id="trainingModal">
+
+
+        <div class="training-modal">
+
+
+            <button class="close-modal"
+                    id="closeModal">
+
+                ×
+
+            </button>
+
+
+            <div class="modal-icon"
+                 id="modalIcon">
+
+                🔥
+
+            </div>
+
+
+            <span id="modalModule">
+                MODULE 01
+            </span>
+
+
+            <h2 id="modalTitle"
+                data-i18n="fireEmergency">
+
+                Fire Emergency
+
+            </h2>
+
+
+            <p id="modalDescription"
+               data-i18n="fireEmergencyDescription">
+
+                Learn the correct safety procedure for handling
+                a fire emergency inside the mine.
+
+            </p>
+
+
+            <div class="modal-steps">
+
+
+                <div>
+
+                    <span>01</span>
+
+                    <p>
+                        Understand the emergency situation
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>02</span>
+
+                    <p>
+                        Follow the safety instructions
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>03</span>
+
+                    <p>
+                        Complete the AR training
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <button class="begin-btn"
+                    id="beginTraining">
+
+                Begin AR Training →
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= SYNC OVERLAY ================= -->
+
+    <div class="sync-overlay"
+         id="syncOverlay">
+
+
+        <div class="sync-box">
+
+            <div class="loader"></div>
+
+
+            <strong>
+                Syncing data...
+            </strong>
+
+
+            <span>
+                Please wait
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="training.js"></script>
+
+<script src="language-system.js"></script>
+
+</body>
+</html>

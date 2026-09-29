@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AR SAFETY TRAINING - Attendance</title>
+    
+    <link rel="stylesheet" href="attendance.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+            <div class="logo-icon">🛡️</div>
+
+            <div>
+                <h2>Suraksha AR</h2>
+                <span>Jharkhand Mines</span>
+            </div>
+        </div>
+
+        <nav class="side-nav">
+
+            <button id="sideHome">
+                <span>🏠</span>
+                <small data-i18n="home">Home</small>
+            </button>
+
+            <button id="sideTraining">
+                <span>🎯</span>
+                <small data-i18n="training">Training</small>
+            </button>
+
+            <button id="sideProgress">
+                <span>📊</span>
+                <small data-i18n="progress">Progress</small>
+            </button>
+
+            <button id="sideAttendance" class="active">
+                <span>📅</span>
+                <small data-i18n="attendance">Attendance</small>
+            </button>
+
+            <button id="sideProfile">
+                <span>👤</span>
+                <small data-i18n="profile">Profile</small>
+            </button>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-status">
+                <span class="status-dot"></span>
+                <span data-i18n="online">Online</span>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN AREA ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-page-title">
+                <span>📅</span>
+                <span data-i18n="attendance">Attendance</span>
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="connection-status">
+                    <span class="status-dot"></span>
+                    <span data-i18n="online">Online</span>
+                </div>
+
+                <div class="language-box">
+
+                    <span>🌐</span>
+
+                    <select id="languageSelect">
+
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="sat">Santhali</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE CONTENT ================= -->
+
+        <section class="page-content">
+
+            <!-- PAGE HEADER -->
+
+            <div class="page-header">
+
+                <div>
+
+                    <p class="page-label">
+                        <span>📅</span>
+                        <span data-i18n="attendance">ATTENDANCE</span>
+                    </p>
+
+                    <h1 data-i18n="attendanceOverview">
+                        Attendance Overview
+                    </h1>
+
+                    <p data-i18n="trackYourAttendance">
+                        Track your daily attendance and work participation.
+                    </p>
+
+                </div>
+
+                <div class="calendar-icon">
+                    📅
+                </div>
+
+            </div>
+
+
+            <!-- ================= SUMMARY CARDS ================= -->
+
+            <div class="attendance-summary">
+
+                <!-- ATTENDANCE PERCENTAGE -->
+
+                <div class="summary-card percentage-card">
+
+                    <div class="summary-icon purple-icon">
+                        📊
+                    </div>
+
+                    <div class="summary-info">
+
+                        <span data-i18n="attendancePercentage">
+                            Attendance Percentage
+                        </span>
+
+                        <strong id="attendancePercentage">
+                            90%
+                        </strong>
+
+                        <small data-i18n="overallAttendance">
+                            Overall attendance
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRESENT -->
+
+                <div class="summary-card">
+
+                    <div class="summary-icon green-icon">
+                        ✓
+                    </div>
+
+                    <div class="summary-info">
+
+                        <span data-i18n="present">
+                            Present
+                        </span>
+
+                        <strong id="presentDays">
+                            27
+                        </strong>
+
+                        <small data-i18n="daysPresent">
+                            Days present
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ABSENT -->
+
+                <div class="summary-card">
+
+                    <div class="summary-icon red-icon">
+                        !
+                    </div>
+
+                    <div class="summary-info">
+
+                        <span data-i18n="absent">
+                            Absent
+                        </span>
+
+                        <strong id="absentDays">
+                            3
+                        </strong>
+
+                        <small data-i18n="daysAbsent">
+                            Days absent
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOTAL DAYS -->
+
+                <div class="summary-card">
+
+                    <div class="summary-icon blue-icon">
+                        📅
+                    </div>
+
+                    <div class="summary-info">
+
+                        <span data-i18n="totalDays">
+                            Total Days
+                        </span>
+
+                        <strong id="totalDays">
+                            30
+                        </strong>
+
+                        <small data-i18n="workingDays">
+                            Working days
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= ATTENDANCE PROGRESS ================= -->
+
+            <div class="attendance-progress-card">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <h2 data-i18n="attendanceProgress">
+                            Attendance Progress
+                        </h2>
+
+                        <p data-i18n="attendanceProgressDescription">
+                            Your attendance performance for the current period.
+                        </p>
+
+                    </div>
+
+                    <strong id="progressPercentage">
+                        90%
+                    </strong>
+
+                </div>
+
+                <div class="progress-track">
+
+                    <div
+                        class="progress-fill"
+                        id="attendanceProgressBar"
+                        style="width: 90%;">
+                    </div>
+
+                </div>
+
+                <div class="progress-labels">
+
+                    <span>
+                        <b id="progressPresent">27</b>
+                        <span data-i18n="presentDaysLabel"> Present</span>
+                    </span>
+
+                    <span>
+                        <b id="progressTotal">30</b>
+                        <span data-i18n="totalDaysLabel"> Total Days</span>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= RECENT ATTENDANCE ================= -->
+
+            <div class="attendance-history-card">
+
+                <div class="history-header">
+
+                    <div>
+
+                        <h2 data-i18n="recentAttendance">
+                            Recent Attendance
+                        </h2>
+
+                        <p data-i18n="recentAttendanceDescription">
+                            Your latest attendance records.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="today-btn"
+                        id="todayBtn"
+                        data-i18n="today">
+                        Today
+                    </button>
+
+                </div>
+
+
+                <div class="attendance-table-wrapper">
+
+                    <table class="attendance-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th data-i18n="date">
+                                    Date
+                                </th>
+
+                                <th data-i18n="day">
+                                    Day
+                                </th>
+
+                                <th data-i18n="status">
+                                    Status
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="attendanceTableBody">
+
+                            <!-- JS will insert records -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= ATTENDANCE NOTE ================= -->
+
+            <div class="attendance-note">
+
+                <div class="note-icon">
+                    💡
+                </div>
+
+                <div>
+
+                    <h3 data-i18n="attendanceNoteTitle">
+                        Attendance Reminder
+                    </h3>
+
+                    <p data-i18n="attendanceNote">
+                        Regular attendance helps you stay updated with safety
+                        training and workplace procedures.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= MOBILE NAV ================= -->
+
+    <nav class="mobile-nav">
+
+        <button id="mobileHome">
+
+            <span>🏠</span>
+
+            <small data-i18n="home">
+                Home
+            </small>
+
+        </button>
+
+
+        <button id="mobileTraining">
+
+            <span>🎯</span>
+
+            <small data-i18n="training">
+                Training
+            </small>
+
+        </button>
+
+
+        <button id="mobileProgress">
+
+            <span>📊</span>
+
+            <small data-i18n="progress">
+                Progress
+            </small>
+
+        </button>
+
+
+        <button id="mobileAttendance" class="active">
+
+            <span>📅</span>
+
+            <small data-i18n="attendance">
+                Attendance
+            </small>
+
+        </button>
+
+
+        <button id="mobileProfile">
+
+            <span>👤</span>
+
+            <small data-i18n="profile">
+                Profile
+            </small>
+
+        </button>
+
+    </nav>
+
+
+    <!-- ================= SCRIPTS ================= -->
+
+    <script src="attendance.js"></script>
+    <script src="language-system.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AR SAFETY TRAINING - Progress</title>
+    
+    <link rel="stylesheet" href="progress.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- ================= TOP BAR ================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🛡️
+            </div>
+
+            <div>
+
+                <h1>AR SAFETY TRAINING</h1>
+
+                <span>Jharkhand Mines</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="top-actions">
+
+            <div
+                class="connection-status"
+                id="connectionStatus">
+
+                <span class="status-dot"></span>
+
+                <span id="connectionText" data-i18n="online">
+                    Online
+                </span>
+
+            </div>
+
+
+            <select
+                id="languageSelect"
+                class="language-select">
+
+                <option value="en">
+                    EN
+                </option>
+
+                <option value="hi">
+                    हिन्दी
+                </option>
+
+                <option value="sat">
+                    ᱥᱟᱱᱛᱟᱲᱤ
+                </option>
+
+            </select>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= PAGE HEADER ================= -->
+
+        <section class="page-header">
+
+            <div>
+
+                <span
+                    class="small-label"
+                    data-i18n="yourProgress">
+
+                    YOUR PROGRESS
+
+                </span>
+
+
+                <h2 data-i18n="trainingProgress">
+
+                    Training Progress
+
+                </h2>
+
+
+                <p data-i18n="trackYourSafetyProgress">
+
+                    Track your safety training,
+                    test performance and certification status.
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="back-btn"
+                id="backHomeBtn">
+
+                ←
+                <span data-i18n="home">
+                    Home
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ================= OVERALL PROGRESS ================= -->
+
+        <section class="overview-card">
+
+
+            <div class="overview-left">
+
+                <div class="progress-circle">
+
+                    <div>
+
+                        <strong id="progressPercentage">
+                            0%
+                        </strong>
+
+                        <span data-i18n="complete">
+                            Complete
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="overview-info">
+
+                    <span
+                        class="card-label"
+                        data-i18n="overallProgress">
+
+                        OVERALL PROGRESS
+
+                    </span>
+
+
+                    <h3
+                        id="progressMessage"
+                        data-i18n="startTraining">
+
+                        Start your training
+
+                    </h3>
+
+
+                    <p
+                        id="progressDescription"
+                        data-i18n="completeAllScenarios">
+
+                        Complete all three safety scenarios
+                        to unlock the safety test.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="progress-count">
+
+                <strong id="completedCount">
+                    0 / 3
+                </strong>
+
+                <span data-i18n="scenariosCompleted">
+                    Scenarios Completed
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= TRAINING ================= -->
+
+        <section class="section-block">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span
+                        class="card-label"
+                        data-i18n="safetyTraining">
+
+                        SAFETY TRAINING
+
+                    </span>
+
+
+                    <h3 data-i18n="trainingModules">
+
+                        Training Modules
+
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="training-list">
+
+
+                <!-- ================= FIRE ================= -->
+
+                <article
+                    class="training-item"
+                    id="fireCard">
+
+                    <div class="scenario-icon">
+                        🔥
+                    </div>
+
+
+                    <div class="scenario-info">
+
+                        <h4 data-i18n="fireEmergency">
+                            Fire Emergency
+                        </h4>
+
+                        <p data-i18n="fireEmergencyDesc">
+                            Learn how to respond safely
+                            during a mine fire emergency.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="scenario-status"
+                        id="fireStatus">
+
+                        <span class="status-icon">
+                            ○
+                        </span>
+
+                        <span
+                            class="status-text"
+                            data-i18n="notCompleted">
+
+                            Not Completed
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ================= GAS ================= -->
+
+                <article
+                    class="training-item"
+                    id="gasCard">
+
+                    <div class="scenario-icon gas">
+                        ⚠️
+                    </div>
+
+
+                    <div class="scenario-info">
+
+                        <h4 data-i18n="gasLeakage">
+                            Gas Leakage
+                        </h4>
+
+                        <p data-i18n="gasLeakageDesc">
+                            Learn how to identify and respond
+                            to dangerous gas leakage.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="scenario-status"
+                        id="gasStatus">
+
+                        <span class="status-icon">
+                            ○
+                        </span>
+
+                        <span
+                            class="status-text"
+                            data-i18n="notCompleted">
+
+                            Not Completed
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ================= MACHINE ================= -->
+
+                <article
+                    class="training-item"
+                    id="machineCard">
+
+                    <div class="scenario-icon machine">
+                        ⚙️
+                    </div>
+
+
+                    <div class="scenario-info">
+
+                        <h4 data-i18n="machineMalfunction">
+                            Machine Malfunction
+                        </h4>
+
+                        <p data-i18n="machineMalfunctionDesc">
+                            Learn the correct response
+                            when mining machinery fails.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="scenario-status"
+                        id="machineStatus">
+
+                        <span class="status-icon">
+                            ○
+                        </span>
+
+                        <span
+                            class="status-text"
+                            data-i18n="notCompleted">
+
+                            Not Completed
+
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= TEST ================= -->
+
+        <section class="test-card">
+
+
+            <div class="test-icon">
+                📝
+            </div>
+
+
+            <div class="test-content">
+
+                <span
+                    class="card-label"
+                    data-i18n="safetyTest">
+
+                    SAFETY TEST
+
+                </span>
+
+
+                <h3 data-i18n="safetyKnowledgeTest">
+
+                    Safety Knowledge Test
+
+                </h3>
+
+
+                <p
+                    id="testDescription"
+                    data-i18n="completeTrainingToUnlock">
+
+                    Complete all training scenarios
+                    to unlock the test.
+
+                </p>
+
+
+                <div class="test-result">
+
+                    <span data-i18n="score">
+                        Score
+                    </span>
+
+                    <strong id="testScore">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="test-status"
+                id="testStatus">
+
+                <span
+                    class="lock-icon"
+                    id="testIcon">
+
+                    🔒
+
+                </span>
+
+                <span
+                    id="testStatusText"
+                    data-i18n="locked">
+
+                    Locked
+
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= CERTIFICATE ================= -->
+
+        <section class="certificate-card">
+
+
+            <div class="certificate-icon">
+                🏆
+            </div>
+
+
+            <div>
+
+                <span
+                    class="card-label"
+                    data-i18n="certificate">
+
+                    CERTIFICATE
+
+                </span>
+
+
+                <h3 data-i18n="safetyCertificate">
+
+                    Safety Training Certificate
+
+                </h3>
+
+
+                <p
+                    id="certificateText"
+                    data-i18n="completeTestToEarn">
+
+                    Complete and pass the safety test
+                    to earn your certificate.
+
+                </p>
+
+            </div>
+
+
+            <span
+                class="certificate-status"
+                id="certificateStatus"
+                data-i18n="pending">
+
+                Pending
+
+            </span>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <div class="brand-icon">
+                🛡️
+            </div>
+
+            <div>
+
+                <strong>
+                    Suraksha AR
+                </strong>
+
+                <span>
+                    Jharkhand Mines
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <nav>
+
+
+            <!-- HOME -->
+
+            <button id="sideHome">
+
+                <span>⌂</span>
+
+                <small data-i18n="home">
+                    Home
+                </small>
+
+            </button>
+
+
+            <!-- TRAINING -->
+
+            <button id="sideTraining">
+
+                <span>🎯</span>
+
+                <small data-i18n="training">
+                    Training
+                </small>
+
+            </button>
+
+
+            <!-- PROGRESS -->
+
+            <button
+                class="active"
+                id="sideProgress">
+
+                <span>📊</span>
+
+                <small data-i18n="progress">
+                    Progress
+                </small>
+
+            </button>
+
+
+            <!-- ATTENDANCE -->
+
+            <button id="sideAttendance">
+
+                <span>📅</span>
+
+                <small data-i18n="attendance">
+                    Attendance
+                </small>
+
+            </button>
+
+
+            <!-- PROFILE -->
+
+            <button id="sideProfile">
+
+                <span>👤</span>
+
+                <small data-i18n="profile">
+                    Profile
+                </small>
+
+            </button>
+
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- ================= MOBILE NAV ================= -->
+
+    <nav class="mobile-nav">
+
+
+        <!-- HOME -->
+
+        <button id="mobileHome">
+
+            <span>⌂</span>
+
+            <small data-i18n="home">
+                Home
+            </small>
+
+        </button>
+
+
+        <!-- TRAINING -->
+
+        <button id="mobileTraining">
+
+            <span>🎯</span>
+
+            <small data-i18n="training">
+                Training
+            </small>
+
+        </button>
+
+
+        <!-- PROGRESS -->
+
+        <button
+            class="active"
+            id="mobileProgress">
+
+            <span>📊</span>
+
+            <small data-i18n="progress">
+                Progress
+            </small>
+
+        </button>
+
+
+        <!-- ATTENDANCE -->
+
+        <button id="mobileAttendance">
+
+            <span>📅</span>
+
+            <small data-i18n="attendance">
+                Attendance
+            </small>
+
+        </button>
+
+
+        <!-- PROFILE -->
+
+        <button id="mobileProfile">
+
+            <span>👤</span>
+
+            <small data-i18n="profile">
+                Profile
+            </small>
+
+        </button>
+
+
+    </nav>
+
+
+</div>
+
+
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="progress.js"></script>
+
+<script src="language-system.js"></script>
+
+
+</body>
+
+</html>
